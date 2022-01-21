@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    outline: none;
+}
+body{
+    background-color: rgb(255, 252, 203);
 }
 .content{
     width: 100%;
@@ -13,28 +17,35 @@
     position: relative;
     .start, .stop{
         margin-bottom: 1rem;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
         position: relative;
         display: flex;
-        width: 50px;
-        height: 30px;
+        width: 80px;
+        height: 50px;
         justify-content: center;
         align-items: center;
         background-color: rgb(133, 255, 133);
+        border-radius: 1rem;
     }
+.start .stop:focus{
+    outline: none;
+    box-shadow: none;
+}
+
     .stop{
         display: none;
         background-color: rgb(255, 111, 111);
     }
 }
 .mainGrid{
-    height: 90vh;
-    width: 90vh;
+    height: 80vh;
+    width: 80vh;
     background-color: rgb(216, 216, 216);
     display: grid;
-    grid-template-columns: repeat(8, auto);
+    grid-template-columns: repeat(8, 9.8vh);
     grid-template-rows: repeat(8, auto);
-
+    border: 5px rgb(83, 83, 83) solid;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
     .lampka{
         display: flex;
         margin: auto;
@@ -52,8 +63,40 @@
         width: 60%;
         margin: auto;
         cursor: pointer;
+        outline: none;
     }
     button:active{
         background-color: rgb(163, 0, 0);
+    }
+}
+.scoreboard{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3%;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 5%;
+    background-color: rgba(19, 19, 19, 0.8);
+    border: 2px black solid;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    .ukosnik{
+        margin-inline: 10%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .scoreboard{
+    font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .scoreboard{
+    font-size: 0.8rem;
     }
 }
