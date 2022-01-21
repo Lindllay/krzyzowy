@@ -91,7 +91,7 @@ var stop = document.getElementById('stop');
 var interval;
 
 start.addEventListener('click', ()  => {
-interval = setInterval(losowanieLampek, 2000);
+interval = setInterval(losowanieLampek, 1200);
 start.style.display = 'none';
 stop.style.display = 'flex'
 });
