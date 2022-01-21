@@ -65,9 +65,9 @@ body {
   background-color: #d8d8d8;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (9.8vh)[8];
+  -ms-grid-columns: repeat(8, 9.8vh);
       grid-template-columns: repeat(8, 9.8vh);
-  -ms-grid-rows: (auto)[8];
+  -ms-grid-rows: repeat(8, auto);
       grid-template-rows: repeat(8, auto);
   border: 5px #535353 solid;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
